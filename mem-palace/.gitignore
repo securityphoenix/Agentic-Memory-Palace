@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+scripts/__pycache__/
+reports/
+*.log
+scripts/*-context-*.md
+scripts/session-flush-*.md
+scripts/flush-context-*.md
+scripts/last-*.json
+scripts/dream-state.json
+scripts/state.json

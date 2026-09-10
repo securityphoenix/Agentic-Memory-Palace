@@ -1,0 +1,40 @@
+{
+  "known_account_ids": [],
+  "anonymized_account_prefix": "100000000",
+  "anonymized_account_id_regexes": [
+    "^(\\d)\\1{11}$",
+    "^123456789012$"
+  ],
+  "skip_directories": [],
+  "skip_extensions": [
+    ".pyc",
+    ".so",
+    ".zip",
+    ".rar",
+    ".xlsx"
+  ],
+  "allowlist_regexes": [
+    "example\\.com",
+    "example\\.org",
+    "test@example\\.com",
+    "user@example\\.com",
+    "dummy",
+    "placeholder",
+    "changeme",
+    "redacted"
+  ],
+  "allowlisted_findings": [],
+  "patterns": {
+    "aws_access_key": "\\b(?:AKIA|ASIA)[0-9A-Z]{16}\\b",
+    "aws_secret_access_key": "(?i)\\baws_secret_access_key\\b\\s*[=:]\\s*['\"]?[A-Za-z0-9/+=]{40}['\"]?",
+    "aws_arn_with_real_account": "arn:aws[a-z-]*:[a-z0-9-]+:[a-z0-9-]*:\\d{12}:",
+    "aws_account_id_assignment": "(?i)\\b(?:aws_)?account_id\\b\\s*[=:]\\s*['\"]?\\d{12}['\"]?",
+    "api_key_assignment": "(?i)\\b(api_key|api_token|access_token|secret_key)\\b\\s*[=:]\\s*['\"]?[A-Za-z0-9_-]{32,}['\"]?",
+    "client_secret_assignment": "(?i)\\bclient_secret\\b\\s*[=:]\\s*['\"]?[A-Za-z0-9_-]{20,}['\"]?",
+    "bearer_jwt": "Bearer\\s+[A-Za-z0-9_-]+\\.[A-Za-z0-9_-]+\\.[A-Za-z0-9_-]+",
+    "github_token": "gh[oprsu]_[A-Za-z0-9]{36}",
+    "github_pat": "github_pat_[A-Za-z0-9_]{20,}",
+    "slack_token": "xox[baprs]-[A-Za-z0-9-]{10,}",
+    "private_key_header": "-----BEGIN (RSA |EC |OPENSSH |PGP )?PRIVATE KEY-----"
+  }
+}

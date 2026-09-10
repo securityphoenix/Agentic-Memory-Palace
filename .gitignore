@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# uv build artefacts
+.uv/
+
+# macOS
+.DS_Store
+
+# The pack ships no runtime state. If you test the installer in place,
+# these are what it would leave behind.
+mem-palace/reports/
+mem-palace/scripts/state.json
+mem-palace/scripts/last-*.json
+mem-palace/scripts/dream-state.json
+mem-palace/scripts/*.log
+mem-palace/scripts/session-flush-*.md
+
+# Running the pack's own scripts in place writes a memory store here.
+# The pack ships no memory; docs/ holds documentation only.
+docs/daily/
+docs/knowledge/
+
+# Full-resolution source images. Web-sized copies live in assets/.
+areefacts/

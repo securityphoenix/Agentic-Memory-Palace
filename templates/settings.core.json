@@ -1,0 +1,43 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd \"$CLAUDE_PROJECT_DIR/mem-palace\" && uv run python hooks/session-start.py",
+            "timeout": 15,
+            "statusMessage": "Loading knowledge base..."
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd \"$CLAUDE_PROJECT_DIR/mem-palace\" && uv run python hooks/pre-compact.py",
+            "timeout": 10,
+            "statusMessage": "Capturing context before compaction..."
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd \"$CLAUDE_PROJECT_DIR/mem-palace\" && uv run python hooks/session-end.py",
+            "timeout": 10,
+            "statusMessage": "Saving session to daily log..."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+[project]
+name = "memory-palace"
+version = "1.0.0"
+description = "Memory Palace - a memory system for Claude Code. Sessions become a linked knowledge graph."
+requires-python = ">=3.12"
+dependencies = [
+    "claude-agent-sdk>=0.1.29",
+    "python-dotenv>=1.0.0",
+    "tzdata>=2024.1",
+]
+
+[tool.ruff]
+line-length = 100
